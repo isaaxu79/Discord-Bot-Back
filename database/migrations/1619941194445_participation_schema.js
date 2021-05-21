@@ -9,7 +9,6 @@ class ParticipationSchema extends Schema {
       table.increments()
       table.integer('tournament_id').references('id').inTable('tournaments').onDelete('cascade')
       table.integer('usuario_id').references('id').inTable('users').onDelete('cascade')
-      table.boolean('winner').default(false)
       table.timestamps()
     })
   }

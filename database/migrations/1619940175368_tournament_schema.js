@@ -7,8 +7,9 @@ class TournamentSchema extends Schema {
   up () {
     this.create('tournaments', (table) => {
       table.increments()
-      table.string("torneo_name").nullable()
-      table.boolean("activo").notNullable()
+      table.string("no_torneo").nullable()
+      table.boolean("estatus").notNullable()
+      table.string("descripcion").nullable()
       table.timestamps()
     })
   }
